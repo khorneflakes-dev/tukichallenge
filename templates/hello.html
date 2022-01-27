@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel='stylesheet' href='./static/style.css'>
+    <title>Solo Tuki Challenge</title>
+  </head>
+  <body>
+    <div class="nav-container">
+        <div class="navbar">
+            <h1 id="navbar-logo">SoloTukiChallenge</h1>
+            <div class="menu-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+              <li><a href="#" class="nav-links">CLASIFICACIÓN</a></li>
+              <li><a href="#" class="nav-links">NORMAS</a></li>
+              <li><a href="#" class="nav-links">PREMIOS</a></li>
+              <li><a href="#" class="nav-links">SPONSORS</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div>
+          
+      <div class="content">
+        
+        <div class="container">
+          <h2 class="mb-5">TABLA DE CLASIFICACIÓN</h2>
+          
+    
+          <div class="table-responsive custom-table-responsive">
+    
+            <table class="table custom-table">
+              <thead>
+                <tr>  
+                  {% for column_name in columns_names %}                    
+                  <th scope="col">{{ column_name }}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              
+              <tbody>
+                {% for name in summoners_datas %}
+                <tr scope="row">
+                  {% for aps in name %}
+                  <td>{{ aps }}</td>
+                  {% endfor %}
+
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+    
+    
+        </div>
+    
+      </div>
+        
+    
+      
+  
+    
+    <script src='./static/app.js'></script>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
